@@ -1,13 +1,19 @@
-
-table {
+#complaintsTable table {
   width: 100%;
   text-align: center;
-}
-tr, td, th {
-  margin: 0;
-  padding: 2px;
-  border:1px solid gray;
   border-collapse: collapse;
-  border-width: 0;
-  border-color: gray;
+}
+
+#complaintsTable td, th {
+  padding: 2px;
+  border:1px solid #b2b2b2;
+  border-collapse: collapse;
+}
+
+#complaintsTable th#empty-head {
+    border: none;
+}
+
+#complaintsTable th#header{
+    background-color: #bfbfbf;
 }

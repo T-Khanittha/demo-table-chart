@@ -1,22 +1,37 @@
 var dataToTable = function (dataset) {
   var html = "<table>";
-  html += '<tr><thead><th style="width:120px;"></th>';
+  const averageComplaints = 50;
+  html += '<tr><thead><th id="empty-head"></th>';
 
   jQuery.each(dataset.labels, function (idx, item) {
-      html += '<th style="background-color:grey;">' + item + "</th>";
+    html += '<th id="header">' + item + "</th>";
   });
-  html += '</thead></tr>'
+  html += "</thead></tr>";
 
   jQuery.each(dataset.datasets, function (idx, item) {
-    html += '<tr><th>' + item.label +'</th>';
-    for ( i = 0 ; i < data.labels.length ; i++){
-      html += '<td>' + item.data[i]+ '</td>';
+    html += "<tr><th id='header'>" + item.label + "</th>";
+    for (i = 0; i < data.labels.length; i++) {
+      html +=
+        '<td style="background-color:' +
+        checkComplaintLevel(item.data[i]) +
+        ';"></td>';
     }
-    html += '</tr>';
-
+    html += "</tr>";
   });
 
   html += "</tr><tbody></table>";
+
+  function checkComplaintLevel(number) {
+    if (number > averageComplaints) {
+      return "#fe6869";
+    } else if (number == averageComplaints) {
+      return "#ffda68";
+    } else if (number < averageComplaints) {
+      return "#bfe497";
+    } else {
+      return "none";
+    }
+  }
 
   return html;
 };
@@ -33,19 +48,19 @@ var data = {
   datasets: [
     {
       label: "บ้านอยู่อาศัย",
-      data: [65, 59, 80, 81, 56, 55, 40],
+      data: [50, 50, 30, 11, 56, 50, 40],
     },
     {
       label: "พาณิชย์",
-      data: [28, 48, 40, 19, 86, 27, 90],
+      data: [28, 50, 40, 20, 26, 50, 30],
     },
     {
       label: "อุตสาหกรรม",
-      data: [18, 48, 40, 29, 86, 57, 90],
+      data: [18, 48, 40, 29, 50, 57, 90],
     },
     {
       label: "อื่นๆ",
-      data: [18, 48, 40, 29, 86, 57, 90],
+      data: [18, 48, 50, 29, 86, 57, 90],
     },
   ],
 };
