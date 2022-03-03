@@ -1,0 +1,34 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+#complaintsTable table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+#complaintsTable td,
+th {
+  padding: 2px;
+  border: 1px solid #b2b2b2;
+  border-collapse: collapse;
+}
+
+#complaintsTable th#empty-head {
+  border: none;
+}
+
+#complaintsTable th#header {
+  background-color: #bfbfbf;
+}
+
+#imgLabelTable {
+  display: grid;
+  justify-content: end;
+}

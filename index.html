@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
-</head>
-<body>
-</div>
-    <h3 id="table-title">ข้อร้องเรียน แบ่งตามประเภทของข้อร้องเรียนตามกลุ่มลูกค้า</h3>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h3 id="table-title">
+      ข้อร้องเรียน แบ่งตามประเภทของข้อร้องเรียนตามกลุ่มลูกค้า
+    </h3>
+    <div id="imgLabelTable">
+      <span
+        ><img
+          src="img/moreThanAverage.svg"
+        />มีการร้องเรียนมากกว่าค่าเฉลี่ย</span
+      >
+    </div>
+    <div id="imgLabelTable">
+      <span
+        ><img src="img/equalAverage.svg" />มีการร้องเรียนเทียบค่าเฉลี่ย</span
+      >
+    </div>
+    <div id="imgLabelTable">
+      <span
+        ><img
+          src="img/lessThanAverage.svg"
+        />มีการร้องเรียนน้อยกว่าค่าเฉลี่ย</span
+      >
+    </div>
     <div id="complaintsTable"></div>
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="scripts.js" ></script>
-
-</body>
+    <script src="scripts.js"></script>
+  </body>
 </html>
